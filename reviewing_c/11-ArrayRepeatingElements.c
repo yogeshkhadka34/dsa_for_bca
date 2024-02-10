@@ -15,6 +15,11 @@ void sort_array(int arr[], int n){
 				arr[j]= arr[j+1];
 				arr[j+1]= temp;
 			}
+			printf("The i=%d, j=%d iterations gives array ",i,j);
+			for(int k=0; k<n;k++){
+				printf("%d ", arr[k]);
+			}
+			printf("\n");
 		}
 	}
 }
@@ -22,36 +27,28 @@ void sort_array(int arr[], int n){
 //Finding repeating element and writing it without repeating
 int find_repeating(int arr[], int n){
 	
-int count = 0; 
-    for (int i = 0; i < n; i++) { 
-  		printf("Starting value of i is %d \n",i); 
+    for (int i = 0; i < n; i++) {  
         int flag = 0; 
         while (i < n - 1 && arr[i] == arr[i + 1]) { 
-        	printf("%d \n", arr[i+1]);
             flag = 1; 
             i++; 
         } 
         if (flag) 
             printf("%d ", (arr[i - 1]));
-			printf("flagged and value of i is %d \n",i); 
     } 
   
     return 0; 
 }
 
 int main(){
-	int arr[]={5,2,1,1,3,4,5,3,3,3,3,5,2};
+	int arr[]={5,2,1,1,2,4,5};
 	int array_length = sizeof(arr)/sizeof(arr[0]);
 	
 	sort_array(arr, array_length);
 	
+	printf("\nThe repeated elements in array are ");
 	int new_length= find_repeating(arr,array_length);
-	
-	printf("The repeated elements in array are ");
-	for (int i=0; i<new_length; i++){
-		printf("%d ", arr[i]);
-	}
-	
+		
 	return 0;
 }
 
