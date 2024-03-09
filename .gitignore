@@ -1,3 +1,6 @@
+.gitignore
+/reviewing_c/*
+
 # Prerequisites
 *.d
 

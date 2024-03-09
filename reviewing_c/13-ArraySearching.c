@@ -9,9 +9,9 @@ int search(int arr[], int n, int x){
 }
 
 int main(){
-	int arr[]={1,2,4,6,8};
+	int arr[]={-1,1,2,4,6,8};
 	int length= sizeof(arr)/sizeof(arr[0]);
-	int x=9;
+	int x=-1;
 	
 	int result= search(arr,length,x);
 	
